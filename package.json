@@ -1,0 +1,14 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "start": "npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
