@@ -1,7 +1,10 @@
 import { ArrowRight, Shield, Clock, MapPin } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 
 export function Hero() {
+  const navigate = useNavigate()
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-green-50 to-white py-20 sm:py-32">
       <div className="container relative">
@@ -25,11 +28,19 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="healthcare-gradient">
+              <Button 
+                size="lg" 
+                className="healthcare-gradient"
+                onClick={() => navigate('/medications')}
+              >
                 Browse Medications
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => navigate('/hospitals')}
+              >
                 Find Hospitals
               </Button>
             </div>
