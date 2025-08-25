@@ -1,0 +1,83 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 2em;
+  margin: 2rem 0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.read-the-docs {
+  color: #888;
+  margin: 2rem 0;
+}
+
+.features {
+  text-align: left;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.features h2 {
+  margin-top: 0;
+  color: #646cff;
+  font-size: 1.5em;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.features li:before {
+  content: "✓ ";
+  color: #4ade80;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    border: 1px solid #ddd;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .features {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .features li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
