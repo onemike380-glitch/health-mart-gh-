@@ -8,6 +8,7 @@ import { Login } from '@/pages/Login'
 import { Register } from '@/pages/Register'
 import { Medications } from '@/pages/Medications'
 import { Cart } from '@/pages/Cart'
+import { HospitalDashboard } from '@/pages/HospitalDashboard'
 import './App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                       <Route path="/" element={<Home />} />
                       <Route path="/medications" element={<Medications />} />
                       <Route path="/cart" element={<Cart />} />
+                      <Route path="/dashboard" element={<HospitalDashboard />} />
                       <Route path="/hospitals" element={<div className="container py-16 text-center"><h1>Hospitals page coming soon...</h1></div>} />
                       <Route path="/about" element={<div className="container py-16 text-center"><h1>About page coming soon...</h1></div>} />
                     </Routes>
