@@ -1,4 +1,5 @@
 import { Heart, Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg healthcare-gradient">
                 <Heart className="h-6 w-6 text-white" />
               </div>
@@ -15,7 +16,7 @@ export function Footer() {
                 <h3 className="text-xl font-bold">Health Mart</h3>
                 <p className="text-sm text-gray-400">Ghana</p>
               </div>
-            </div>
+            </Link>
             <p className="text-gray-400">
               Empowering Ghana's healthcare, one click at a time. Connecting patients 
               with trusted hospitals nationwide.
@@ -26,11 +27,11 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/medications" className="text-gray-400 hover:text-white transition-colors">Medications</a></li>
-              <li><a href="/hospitals" className="text-gray-400 hover:text-white transition-colors">Hospitals</a></li>
-              <li><a href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/medications" className="text-gray-400 hover:text-white transition-colors">Medications</Link></li>
+              <li><Link to="/hospitals" className="text-gray-400 hover:text-white transition-colors">Hospitals</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
