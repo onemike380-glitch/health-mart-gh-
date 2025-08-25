@@ -1,40 +1,27 @@
-import { useState } from 'react'
+import { Header } from '@/components/Header'
+import { Hero } from '@/components/Hero'
+import { Features } from '@/components/Features'
+import { Stats } from '@/components/Stats'
+import { Footer } from '@/components/Footer'
+import { AuthProvider } from '@/contexts/AuthContext'
+import { CartProvider } from '@/contexts/CartContext'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="app">
-      <div className="container">
-        <h1>Health Mart GH</h1>
-        <p className="subtitle">Modern online healthcare platform for Ghana</p>
-        
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
+    <AuthProvider>
+      <CartProvider>
+        <div className="min-h-screen bg-background">
+          <Header />
+          <main>
+            <Hero />
+            <Features />
+            <Stats />
+          </main>
+          <Footer />
         </div>
-        
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-        
-        <div className="features">
-          <h2>Features Coming Soon:</h2>
-          <ul>
-            <li>Direct medication sales from healthcare facilities</li>
-            <li>Secure user authentication and patient management</li>
-            <li>Easy shopping and checkout with persistent cart</li>
-            <li>Seamless backend integration via Supabase</li>
-            <li>Responsive, accessible UI using shadcn-ui and Tailwind CSS</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      </CartProvider>
+    </AuthProvider>
   )
 }
 
