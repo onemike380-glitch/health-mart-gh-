@@ -58,9 +58,18 @@
   }
 }
 
-/* Custom healthcare themed styles */
+/* Enhanced healthcare themed styles */
 .healthcare-gradient {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.hero-background {
+  position: relative;
+  background: linear-gradient(135deg, #065f46 0%, #0f766e 50%, #1e40af 100%);
+}
+
+.medical-pattern-bg {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #eff6ff 100%);
 }
 
 .medication-card {
@@ -77,4 +86,130 @@
 
 .out-of-stock-badge {
   @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800;
+}
+
+/* Enhanced visual effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-hover-effect {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #10b981, #059669, #0891b2, #0369a1);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Parallax effects for backgrounds */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Enhanced shadows and borders */
+.premium-card {
+  @apply bg-white/90 backdrop-blur-sm border border-white/50 shadow-xl;
+}
+
+.premium-card:hover {
+  @apply bg-white/95 shadow-2xl;
+  transform: translateY(-2px);
+}
+
+/* Medical cross pattern */
+.medical-cross-pattern {
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(16, 185, 129, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75px 75px, rgba(5, 150, 105, 0.1) 2px, transparent 2px);
+  background-size: 100px 100px;
+}
+
+/* Floating animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced button styles */
+.btn-premium {
+  @apply relative overflow-hidden;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+/* Responsive background adjustments */
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+  
+  .hero-background {
+    background: linear-gradient(180deg, #065f46 0%, #0f766e 50%, #1e40af 100%);
+  }
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 400% 100%;
+  animation: shimmer 1.5s infinite;
 }
